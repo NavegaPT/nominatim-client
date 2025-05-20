@@ -12,6 +12,10 @@
     "query",
     "lookup"
   ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./types": "./lib/index.d.ts"
+  },
   "homepage": "https://github.com/NavegaPT/nominatim-client#readme",
   "bugs": {
     "url": "https://github.com/NavegaPT/nominatim-client/issues"
