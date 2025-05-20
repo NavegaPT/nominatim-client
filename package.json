@@ -1,6 +1,6 @@
 {
   "name": "@navega/nominatim-client",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple nominatim client based on fetch",
   "keywords": [
     "nominatim",
@@ -14,7 +14,7 @@
   ],
   "exports": {
     ".": "./lib/index.js",
-    "./types": "./lib/index.d.ts"
+    "./types": "./lib/types.d.ts"
   },
   "homepage": "https://github.com/NavegaPT/nominatim-client#readme",
   "bugs": {
