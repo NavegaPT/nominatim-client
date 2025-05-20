@@ -1,6 +1,6 @@
 {
   "name": "@navega/nominatim-client",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A simple nominatim client based on fetch",
   "keywords": [
     "nominatim",
@@ -36,11 +36,10 @@
     "prepare": "npm run build",
     "test": "node lib/index.test.js"
   },
-  "dependencies": {
-    "undici-types": "^6.21.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^22.15.19",
+    "undici-types": "^6.21.0",
     "typescript": "^5.8.3"
   }
 }

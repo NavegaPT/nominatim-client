@@ -1,4 +1,4 @@
-import {
+import type {
   NominatimClientOptions,
   SearchResultItem,
   SearchResultItemAddress,
@@ -11,12 +11,17 @@ export class NominatimClient {
 
   async search(
     query: string,
+    addressDetails?: false
+  ): Promise<SearchResultItem[]>;
+  async search(
+    query: string,
+    addressDetails: true
+  ): Promise<SearchResultItemAddress[]>;
+
+  async search(
+    query: string,
     addressDetails: boolean = false
-  ): Promise<
-    (typeof addressDetails extends true
-      ? SearchResultItemAddress
-      : SearchResultItem)[]
-  > {
+  ): Promise<SearchResultItem[] | SearchResultItemAddress[]> {
     try {
       const fetchResult = await fetch(
         `${BASE_URL}search?q=${query}&format=json&addressdetails=${
@@ -40,12 +45,19 @@ export class NominatimClient {
   async reverse(
     lat: number,
     lon: number,
+    addressDetails?: false
+  ): Promise<SearchResultItem>;
+  async reverse(
+    lat: number,
+    lon: number,
+    addressDetails: true
+  ): Promise<SearchResultItemAddress>;
+
+  async reverse(
+    lat: number,
+    lon: number,
     addressDetails: boolean = false
-  ): Promise<
-    typeof addressDetails extends true
-      ? SearchResultItemAddress
-      : SearchResultItem
-  > {
+  ): Promise<SearchResultItem | SearchResultItemAddress> {
     try {
       const fetchResult = await fetch(
         `${BASE_URL}reverse?lat=${lat}&lon=${lon}&format=json&addressdetails=${
