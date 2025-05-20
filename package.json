@@ -1,6 +1,6 @@
 {
-  "name": "@navegapt/nominatim-client",
-  "version": "1.0.1",
+  "name": "@navega/nominatim-client",
+  "version": "1.0.0",
   "description": "A simple nominatim client based on fetch",
   "keywords": [
     "nominatim",
@@ -33,7 +33,6 @@
   ],
   "scripts": {
     "build": "tsc",
-    "publish": "npm publish --access public",
     "prepare": "npm run build",
     "test": "node lib/index.test.js"
   },
