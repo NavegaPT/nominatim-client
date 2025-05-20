@@ -5,7 +5,7 @@ API client for the Nominatim address server
 ## Installation
 
 ```bash
-npm install @navegapt/nominatim-client
+npm install @navega/nominatim-client
 ```
 
 ## Usage
