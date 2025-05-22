@@ -47,12 +47,14 @@ export class NominatimClient {
   async reverse(
     lat: number,
     lon: number,
-    addressDetails?: false
+    addressDetails?: false,
+    zoomLevel?: ZoomLevel
   ): Promise<SearchResultItem>;
   async reverse(
     lat: number,
     lon: number,
-    addressDetails: true
+    addressDetails: true,
+    zoomLevel?: ZoomLevel
   ): Promise<SearchResultItemAddress>;
 
   async reverse(
