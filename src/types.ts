@@ -31,3 +31,17 @@ export interface SearchResultItemAddress extends SearchResultItem {
     country_code: string;
   };
 }
+
+export enum ZoomLevel {
+  Country = 3,
+  State = 5,
+  County = 8,
+  City = 10,
+  Town = 12,
+  Village = 13,
+  Neighborhood = 14,
+  Settlement = 15,
+  MajorStreets = 16,
+  MajorAndMinorStreets = 17,
+  Building = 18,
+}

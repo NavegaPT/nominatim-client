@@ -4,6 +4,8 @@ import type {
   SearchResultItemAddress,
 } from "./types.js";
 
+import { ZoomLevel } from "./types.js";
+
 const BASE_URL = "https://nominatim.openstreetmap.org/";
 
 export class NominatimClient {
@@ -56,13 +58,14 @@ export class NominatimClient {
   async reverse(
     lat: number,
     lon: number,
-    addressDetails: boolean = false
+    addressDetails: boolean = false,
+    zoomLevel?: ZoomLevel
   ): Promise<SearchResultItem | SearchResultItemAddress> {
     try {
       const fetchResult = await fetch(
         `${BASE_URL}reverse?lat=${lat}&lon=${lon}&format=json&addressdetails=${
           addressDetails ? 1 : 0
-        }`,
+        }${zoomLevel ? `&zoom=${zoomLevel}` : ""}`,
         {
           headers: this.generateHeaders(),
         }
