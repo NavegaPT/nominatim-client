@@ -1,10 +1,9 @@
-import type {
+import {
   NominatimClientOptions,
   SearchResultItem,
   SearchResultItemAddress,
+  ZoomLevel,
 } from "./types.js";
-
-import { ZoomLevel } from "./types.js";
 
 const BASE_URL = "https://nominatim.openstreetmap.org/";
 
